@@ -1,0 +1,42 @@
+{
+    "name": "react-static-block",
+    "version": "1.0.0",
+    "description": "A basic React component - for blog-post, similar cards and blocks.",
+    "main": "lib/index.js",
+    "module": "esm/index.js",
+    "types": "esm/index.d.ts",
+    "scripts": {
+        "build": "npm run build-cjs && npm run build-esm",
+        "build-cjs": "rimraf ./lib && tsc",
+        "build-esm": "rimraf ./esm && tsc --outDir esm --module es2015",
+        "watch": "tsc --outDir esm --module es2015 --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gyhaLabs/react-static-block.git"
+    },
+    "keywords": [
+        "static-block",
+        "react-block",
+        "react-component"
+    ],
+    "files": [
+        "*.md",
+        "lib",
+        "esm",
+        "src"
+    ],
+    "author": "György Hunor-Árpád",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/gyhaLabs/react-static-block/issues"
+    },
+    "homepage": "https://github.com/gyhaLabs/react-static-block#readme",
+    "devDependencies": {
+        "@material-ui/core": "^4.9.13",
+        "@types/react": "^16.9.34",
+        "react": "^16.13.1",
+        "typescript": "^3.8.3",
+        "rimraf": "^3.0.2"
+    }
+}
