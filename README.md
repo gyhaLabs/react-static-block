@@ -1,6 +1,5 @@
 # React Static Block
 
-
 ## Installation
 
 ```sh
@@ -8,7 +7,6 @@ npm install --save react-static-block
 ```
 
 ## Usage
-
 
 ## License
 
