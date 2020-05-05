@@ -1,13 +1,13 @@
 import * as React from "react";
 import { useStyles } from "./static-block.styles";
 
-enum headerStyle {
+export enum StaticBlockHeader {
     ThreeRows = "three-rows",
     TwoRows = "two-rows",
 }
 
 export interface StaticBlockProps {
-    headerStyle: headerStyle.ThreeRows | headerStyle.TwoRows;
+    headerStyle: StaticBlockHeader.ThreeRows | StaticBlockHeader.TwoRows;
     title: string;
     subTitle: string;
     additional: string;
@@ -17,7 +17,7 @@ const StaticBlock: React.SFC<StaticBlockProps> = (props) => {
     const classes = useStyles();
     let header = null;
     switch (props.headerStyle) {
-        case headerStyle.ThreeRows:
+        case StaticBlockHeader.ThreeRows:
             header = (
                 <div className={classes.header}>
                     <p>{props.title}</p>
@@ -26,7 +26,7 @@ const StaticBlock: React.SFC<StaticBlockProps> = (props) => {
                 </div>
             );
             break;
-        case headerStyle.TwoRows:
+        case StaticBlockHeader.TwoRows:
             header = (
                 <div className={classes.header}>
                     <p>{props.title}</p>
